@@ -1,6 +1,5 @@
 import random
 import unit
-import data_terrain
 
 
 class Terrain():
@@ -44,9 +43,9 @@ def terrainGenerator():
 
 def TerrainSetRatings(squad):
     location = squad.location
-    for unit in squad.squad_box:
-        unit.concealment = random.randint(0, location.terrain_conceal)
-        unit.cover = random.randint(0, location.terrain_cover)
+    for man in squad.squad_box:
+        man.concealment = random.randint(0, location.terrain_conceal)
+        man.cover = random.randint(0, location.terrain_cover)
 
 
 def TargetSelection(attacker, target):

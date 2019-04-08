@@ -119,12 +119,14 @@ class Body():
         if self.body.health['head'] == 0 or self.body.health['neck'] == 0:
             self.alive = False
 
-        if self.body.health['right_arm'] == 0 and self.body.health['left_arm'] == 0:
+        if self.body.health['right_arm'] == 0 and \
+                self.body.health['left_arm'] == 0:
             abilities = ['TWOHANDGRAB', 'ONEHANDGRAB', 'CLIMB', 'THROW']
             for ability in abilities:
                 if ability in self.abilities:
                     self.abilities.remove(ability)
-        elif self.body.health['right_arm'] == 0 or self.body.health['left_arm'] == 0:
+        elif self.body.health['right_arm'] == 0 or \
+                self.body.health['left_arm'] == 0:
             abilities = ['TWOHANDGRAB', 'CLIMB']
             for ability in abilities:
                 if ability in self.abilities:
@@ -149,13 +151,15 @@ class Body():
                 if ability in self.abilities:
                     self.abilities.remove(ability)
 
-        if self.body.health['right_leg'] == 0 and self.body.health['left_leg'] == 0:
+        if self.body.health['right_leg'] == 0 and \
+                self.body.health['left_leg'] == 0:
             abilities = ['CLIMB', 'STAND', 'CROUCH', 'WALK', 'RUN',
                          'JUMP']
             for ability in abilities:
                 if ability in self.abilities:
                     self.abilities.remove(ability)
-        elif self.body.health['right_leg'] == 0 or self.body.health['left_leg'] == 0:
+        elif self.body.health['right_leg'] == 0 or \
+                self.body.health['left_leg'] == 0:
             abilities -= ['CLIMB', 'CROUCH', 'RUN', 'JUMP']
             for ability in abilities:
                 if ability in self.abilities:

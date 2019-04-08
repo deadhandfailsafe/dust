@@ -5,9 +5,6 @@ import data_ru
 import entity
 
 
-unit_id_max = 9999
-
-
 class Unit(entity.Entity):
     def __init__(self, box, nation, era):
         super().__init__(box)
